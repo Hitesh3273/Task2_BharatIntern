@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperture Converter</title>
+</head>
+
+<style>
+         
+         body
+         {
+            background-color: coral;
+         }
+
+         .container
+         {
+            padding: 20px;
+            text-align: center;
+         }
+         .converter
+        {
+            margin-top: 20px;
+        }
+        label
+        {
+            display: block;
+            margin-bottom: 10px;
+            
+        }
+        #celsius
+        {
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        #fahrenheit
+        {
+            margin-top: 5px;
+            width: 100%;
+            height: 25px;
+        }
+        #button
+        {
+            padding: 10px 20px;
+            background-color: brown;
+            color: whitesmoke;
+            margin-top: 10px;
+            margin-left: 20px;
+            border: none;
+            cursor: pointer;
+        }
+</style>
+<body>
+    
+<div class="container">
+    <h1>Temperture Converter</h1>
+    <div class="converter">
+        <label> Celsius:</label>
+        <input type="number" id="celsius" placeholder="Enter temprature in ccelsius"/>
+        <label> Fagrenheit:</label>
+        <input type="number" id="fahrenheit">
+
+        <button id="button" onclick="convert()"> Convert  </button>
+    </div>
+</div>
+
+<script>
+function convert() {
+
+    let celsiusInput = document.getElementById("celsius");
+    let fahrenheitInput = document.getElementById("fahrenheit");
+
+    let celsius = parseFloat(celsiusInput.value);
+    let fahrenheit = (celsius*9)/5+32;
+    fahrenheitInput.value = fahrenheit.toFixed(3);
+     }
+
+</script>
+</body>
+</html>
